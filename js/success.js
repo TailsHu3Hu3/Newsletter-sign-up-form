@@ -8,6 +8,3 @@ paragraphInfo.innerHTML = `
     Please open it and click the button inside to confirm your subscription.
 </p>
 `
-
-
-console.log(emailUsed)
