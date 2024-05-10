@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: hsl(4, 100%, 67%);
+    --secondary-color: 	hsl(346, 100%, 66%);
+    --text-color: hsl(234, 29%, 20%);
+    --background-color: hsl(235, 18%, 26%);
+    --placeholder-input: hsl(231, 7%, 60%);
+    --box-background-color: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: "Roboto", sans-serif;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/***************
+*      BOX     *
+****************/
+
+.boxWrapper {
+    width: 450px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: var(--box-background-color);
+    border-radius: 35px;
+    color: var(--text-color);
+}
+
+img {
+    width: 60px;
+}
+
+h1 {
+    font-size: 44px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+p {
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.emailClass {
+    font-weight: bolder;
+}
+
+button {
+    height: 50px;
+    font-size: 14px;
+    border-style: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--text-color);
+    color: var(--box-background-color);
+    font-weight: 700;
+}
+
+/***************
+*    FOOTER    *
+****************/
+
+footer {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    line-height: 22px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:last-of-type {
+    color: #3c065e;
+}
+
+/***************
+*     HOVER    *
+****************/
+
+button:hover {
+    background: hsl(346, 100%, 66%);
+    background: linear-gradient(90deg, hsl(346, 100%, 66%) 0%, hsl(4, 100%, 67%) 100%);
+    cursor: pointer;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    transition-duration: 400ms;
+}
+
+a:last-of-type:hover {
+    color: #7805c0;
+    transition-duration: 400ms;
+}
+
+/***************
+*     MEDIA    *
+****************/
+
+@media (Max-width: 449px) {
+    .boxWrapper {
+        width: auto;
+        height: 100vh;
+        border-radius: 0;
+        padding: 10px 30px;
+    }
+
+    h1 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        margin-bottom: 170px;
+    }
+}

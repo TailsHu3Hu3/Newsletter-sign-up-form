@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <main>
+            <div class="boxWrapper">
+                <div class="formContent">
+                    <h1>Stay updated!</h1>
+                
+                    <h2>Join 60,000+ product managers receiving monthly updates on:</h2>
+            
+                    <ul>
+                        <li>Product discovery and building what matters</li>
+                        <li>Measuring to ensure updates are a success</li>
+                        <li>And much more!</li>
+                    </ul>
+            
+                    <form id="formEmail" action="html/success.html">
+                        <div class="labelWrapper">
+                            <label>Email address</label>
+                            <span class="hidden" id="errorMessageS">Valid email required</span>
+                        </div>
+                        <input name="emailInput" placeholder="email@company.com" class="">
+                
+                        <button type="submit">Subscribe to monthly newsletter</button>
+                    </form>
+                </div>
+                <div class="imageBox">
+                    <img src="assets/images/illustration-sign-up-mobile.svg" alt="Illustration" class="imageMobile">
+                    <img src="assets/images/illustration-sign-up-desktop.svg" alt="Illustration" class="imageDesk">
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a><br> 
+            Coded by <a href="https://tailshu3hu3.github.io" target="_blank">TailsHu3Hu3</a>
+        </footer>
+        <script src="js/script.js"></script>
+    </body>
+</html>

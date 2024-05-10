@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: hsl(4, 100%, 67%);
+    --secondary-color: 	hsl(346, 100%, 66%);
+    --text-color: hsl(234, 29%, 20%);
+    --background-color: hsl(235, 18%, 26%);
+    --placeholder-input: hsl(231, 7%, 60%);
+    --box-background-color: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: "Roboto", sans-serif;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/***************
+*      BOX     *
+****************/
+
+.boxWrapper {
+    width: 700px;
+    padding: 60px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--box-background-color);
+    border-radius: 20px;
+    height: 480px
+}
+
+.formContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 52%;
+    padding: 0px 5px;
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 44px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+#formEmail {
+    display: flex;
+    flex-direction: column
+}
+
+ul {
+    margin: 10px 0;
+}
+
+li {
+    margin-bottom: 10px;
+    background: url(../assets/images/icon-list.svg) no-repeat;
+    list-style-type: none;
+    height: 20px;
+    padding-left: 25px;
+    background-size: 20px;
+} li:last-of-type {
+    margin-bottom: 0;
+}
+
+.labelWrapper {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+label {
+    margin-bottom: 3px;
+}
+
+input {
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: var(--placeholder-input);
+    border-width: 1px;
+    outline-color:black;
+}
+
+button {
+    height: 50px;
+    font-size: 14px;
+    border-style: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--text-color);
+    color: var(--box-background-color);
+}
+
+.imageBox {
+    width: 42%;
+}
+
+.imageDesk {
+    width: 100%;
+    margin-left: 5px;
+}
+
+.imageMobile {
+    width: 100%;
+    display: none;
+}
+
+/***************
+*    FOOTER    *
+****************/
+footer {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    line-height: 22px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:last-of-type {
+    color: #3c065e;
+}
+
+/***************
+*     HOVER    *
+****************/
+
+button:hover {
+    background: hsl(346, 100%, 66%);
+    background: linear-gradient(90deg, hsl(346, 100%, 66%) 0%, hsl(4, 100%, 67%) 100%);
+    cursor: pointer;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    transition-duration: 400ms;
+}
+
+a:last-of-type:hover {
+    color: #7805c0;
+    transition-duration: 400ms;
+}
+
+/***************
+*     MEDIA    *
+****************/
+
+@media (Max-width: 699px) {
+    .boxWrapper {
+        width: 600px;
+        padding: 30px 10px;
+        height: 430px;
+    }
+     
+    h2, ul {
+        font-size: 14px;
+    }
+    
+    .formContent {
+        width: 54%;
+    }
+
+    .imageBox {
+        width: 43%;
+    }
+    .imageDesk {
+        margin-left: 0;
+    }
+}
+
+@media (Max-width: 599px) {
+    main {
+        margin-bottom: 50px;
+    }
+    
+    .boxWrapper {
+        width: 320px;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column-reverse;
+        border-radius: 10px;
+    }
+    
+    .imageBox {
+        width: 100%;
+    }
+    
+    h1 {
+        font-size: 40px;
+    }
+
+    h2, ul {
+        font-size: 13px;
+    }
+
+    .formContent {
+        padding: 0 15px;
+        width: 100%;
+        margin-top: 10px
+    }
+
+    #formEmail {
+        margin-bottom: 10px;
+    }
+
+
+    
+    .imageDesk {
+        display: none;
+    }
+
+    .imageMobile {
+        display: block;
+    }
+}
+
+/***************
+*     ERROR    *
+****************/
+
+.errorInput {
+    color: red;
+    outline-color: red;
+    border-color: #c8918b;
+    color: red;
+}
+
+.errorMessage {
+    color: red;
+}
+
+.errorInput::placeholder {
+    color: red;
+    opacity: 0.5;
+}
+
+.hidden {
+    display: none;
+}
